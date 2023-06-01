@@ -11,9 +11,9 @@
   "private": false,
   "type": "module",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/prindarh/testmapbao.git"
- },
+    "type": "git",
+    "url": "https://github.com/prindarh/testmapbao.git"
+  },
   "dependencies": {
     "@rollup/plugin-json": "^6.0.0",
     "babel-polyfill": "^6.26.0",
