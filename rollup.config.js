@@ -5,17 +5,18 @@ import {
     uglify
 } from 'rollup-plugin-uglify';
 import json from '@rollup/plugin-json'
+import copy from 'rollup-plugin-copy'
 
 export default {
     input: `src/index.js`,
     output: [{
-            file: "dist/index.js",
+            dir: 'dist',
             format: 'es',
         },
-        {
-            file: "dist/index.js",
-            format: "cjs",
-        },
+        // {
+        //     file: "dist/index.js",
+        //     format: "cjs",
+        // },
     ],
     plugins: [
         json(),
@@ -26,5 +27,13 @@ export default {
             runtimeHelpers: true,
         }),
         uglify(),
+        copy({
+            targets: [{
+                src: 'public/Cesium',
+                dest: 'dist'
+            }],
+            verbose: true
+
+        })
     ],
 };
