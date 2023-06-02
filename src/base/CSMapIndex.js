@@ -28,8 +28,8 @@ export class GisCesiumMap {
         this._labels = [];
         this._PointPrimitiveCollection = null;
 
-        let sourcePath = require("./Cesium/Cesium.js");
-        let cssPath = require("./Cesium/Widgets/widgets.css");
+        let sourcePath = "./Cesium/Cesium.js";
+        let cssPath = "./Cesium/Widgets/widgets.css";
         if (this._isOnline) {
             sourcePath = cesiumConfig.sourcePath;
             cssPath = cesiumConfig.cssPath;
