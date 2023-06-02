@@ -6,6 +6,4 @@ function test() {
     return '测试打包';
 }
 
-export {
-    GisCesiumMap
-}
+export default GisCesiumMap;
